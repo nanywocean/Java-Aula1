@@ -334,14 +334,17 @@ if (diaSemana == "Sábado" || diaSemana == "Domingo") {
 //--------- Atividade 5 --------------
 //05 — Promoção especial:Uma loja aplica 15% de desconto se o cliente: Realizar uma compra de R$ 150 ou mais e for assinante; ou Possuir um cupom promocional válido, independentemente de ser assinante. Receba o valor da compra e duas variáveis booleanas (assinante e cupom válido). Informe se o desconto será aplicado e apresente o total final.
 
-let valorCompra = 150;
-let ehAssinante = true;
+let valorCompra = 15;
+let ehAssinante = false;
 let cupomVálido = true;
 
 
-if (valorCompra >= 150 || ehAssinante == true || cupomVálido == true) {
-    console.log("O cupom é válido e será aplicado")
-    console.log(`Sua compra com o cupom de 15% de desconto, tem o valor total de ${valorCompra * 15 / 100}`)
+if (valorCompra >= 150 && ehAssinante == true || cupomVálido == true) {
+    console.log(`O cupom é válido e será aplicado`)
+    console.log(`Total final: ${valorCompra * 0.85}`)
+} else{
+    console.log("Você não tem direito ao desconto!")
+    console.log(`Total final: ${valorCompra}`)
 }
 
 
